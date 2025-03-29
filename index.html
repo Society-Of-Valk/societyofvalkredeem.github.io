@@ -8,36 +8,52 @@
         body {
             font-family: sans-serif;
             margin: 0;
-            background-color: #1e1e2a; /* Dark purple background */
-            color: #e0e0e0; /* Light gray text */
+            background-color: #1e1e2a;
+            color: #e0e0e0;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column; /* Changed to column */
+            align-items: center; /* Center items horizontally */
             min-height: 100vh;
+            position: relative; /* Added for absolute positioning of header elements */
         }
 
         .container {
-            background-color: #2c2c3e; /* Slightly lighter dark purple */
+            background-color: #2c2c3e;
             border-radius: 8px;
             padding: 40px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             width: 100%;
             max-width: 450px;
             text-align: center;
+            margin-top: 60px; /* Added margin to move container down from fixed header */
+            box-sizing: border-box;
         }
 
         .header {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between; /* Changed to space-between */
             align-items: center;
             width: 100%;
             margin-bottom: 30px;
+            position: fixed; /* Make header fixed */
+            top: 0;
+            left: 0;
+            background-color: #2c2c3e; /* Ensure header background is visible */
+            padding: 10px 20px;
+            box-sizing: border-box;
+            z-index: 10; /* Ensure header is above other elements */
+            border-bottom: 2px solid #007bff; /* Added blue border */
         }
 
         .logo {
             font-size: 1.5em;
             font-weight: bold;
-            color: #d8b4fe; /* Light purple accent */
+            color: #d8b4fe;
+        }
+
+        .header-links {
+            display: flex; /* Added to contain the links */
+            align-items: center; /* Vertically center items */
         }
 
         .header-links a {
@@ -51,8 +67,23 @@
             color: #e0e0e0;
         }
 
+        /* New styles for the blue bubbles */
+        .header-links a {
+            background-color: #007bff; /* Blue background */
+            color: white; /* White text */
+            padding: 8px 16px; /* Adjust padding as needed */
+            border-radius: 16px; /* Make it round */
+            text-decoration: none; /* Remove underline */
+            margin-left: 10px; /* Add some horizontal space between links */
+            font-size: 0.9em;
+        }
+
+        .header-links a:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
         .redeem-box {
-            background-color: #3b3b4f; /* Another shade of dark purple */
+            background-color: #3b3b4f;
             border-radius: 6px;
             padding: 30px;
             margin-bottom: 30px;
@@ -99,7 +130,7 @@
         }
 
         .redeem-button {
-            background-color: #8e44ad; /* Purple button */
+            background-color: #8e44ad;
             color: white;
             border: none;
             border-radius: 6px;
@@ -116,15 +147,15 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="logo">Society Of Valk Redeem</div>
-            <div class="header-links">
-                <a href="#">Sign In</a>
-                <a href="#">Admin</a>
-            </div>
+    <div class="header">
+        <div class="logo">Society Of Valk Redeem</div>
+        <div class="header-links">
+            <a href="#">Sign In</a>
+            <a href="#">Admin</a>
         </div>
+    </div>
 
+    <div class="container">
         <div class="redeem-box">
             <h2 class="redeem-title">Society Of Valk</h2>
             <h3 class="redeem-title" style="font-size: 1.5em; margin-top: 0;">Code Redemption</h3>
