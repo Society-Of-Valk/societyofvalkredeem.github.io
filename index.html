@@ -115,21 +115,40 @@
         }
 
         .holographic {
-            background: linear-gradient(to right, #29abe2, #9d4edd, #f06292, #29abe2);
+            background: linear-gradient(to right, #29abe2, #41a7e8, #29abe2); /* Cyan to slightly darker blue to Cyan */
             -webkit-background-clip: text;
             color: transparent;
-            animation: holographic-effect 5s infinite alternate;
-            text-shadow: 0 0 5px #29abe2, 0 0 10px #9d4edd, 0 0 15px #f06292;
+            animation: holographic-blue-effect 3s infinite alternate;
+            text-shadow: 0 0 5px #29abe2, 0 0 10px #41a7e8, 0 0 5px #29abe2;
         }
 
-        @keyframes holographic-effect {
+        @keyframes holographic-blue-effect {
             0% {
                 background-position: 0% 50%;
-                text-shadow: 0 0 5px #29abe2, 0 0 10px #9d4edd, 0 0 15px #f06292;
+                text-shadow: 0 0 5px #29abe2, 0 0 10px #41a7e8, 0 0 5px #29abe2;
             }
             100% {
                 background-position: 100% 50%;
-                text-shadow: 0 0 10px #29abe2, 0 0 15px #9d4edd, 0 0 20px #f06292;
+                text-shadow: 0 0 10px #29abe2, 0 0 15px #41a7e8, 0 0 10px #29abe2;
+            }
+        }
+
+        .holographic-logo {
+            background: linear-gradient(to right, #29abe2, #41a7e8, #29abe2); /* Cyan to slightly darker blue to Cyan */
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: holographic-blue-effect-logo 4s infinite alternate;
+            text-shadow: 0 0 5px #29abe2, 0 0 10px #41a7e8, 0 0 5px #29abe2;
+        }
+
+        @keyframes holographic-blue-effect-logo {
+            0% {
+                background-position: 0% 50%;
+                text-shadow: 0 0 5px #29abe2, 0 0 10px #41a7e8, 0 0 5px #29abe2;
+            }
+            100% {
+                background-position: 100% 50%;
+                text-shadow: 0 0 10px #29abe2, 0 0 15px #41a7e8, 0 0 10px #29abe2;
             }
         }
     </style>
@@ -137,7 +156,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="logo"><span class="holographic">Society Of Valk Redeem</span></div>
+            <div class="logo"><span class="holographic-logo">Society Of Valk Redeem</span></div>
             <div class="header-links">
                 <a href="#">Sign In</a>
                 <a href="#">Admin</a>
