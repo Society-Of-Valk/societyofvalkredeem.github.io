@@ -8,13 +8,13 @@
         body {
             font-family: sans-serif;
             margin: 0;
-            background-color: #1e1e2a;
+            background-color: #1F152B;
             color: #e0e0e0;
             display: flex;
-            flex-direction: column; /* Changed to column */
-            align-items: center; /* Center items horizontally */
+            flex-direction: column;
+            align-items: center;
             min-height: 100vh;
-            position: relative; /* Added for absolute positioning of header elements */
+            position: relative;
         }
 
         .container {
@@ -25,24 +25,26 @@
             width: 100%;
             max-width: 450px;
             text-align: center;
-            margin-top: 60px; /* Added margin to move container down from fixed header */
+            margin-top: 210px;
             box-sizing: border-box;
         }
 
         .header {
             display: flex;
-            justify-content: space-between; /* Changed to space-between */
+            justify-content: space-between;
             align-items: center;
             width: 100%;
             margin-bottom: 30px;
-            position: fixed; /* Make header fixed */
+            position: fixed;
             top: 0;
             left: 0;
-            background-color: #2c2c3e; /* Ensure header background is visible */
+            background-color: #1C1327;
             padding: 10px 20px;
             box-sizing: border-box;
-            z-index: 10; /* Ensure header is above other elements */
-            border-bottom: 2px solid #007bff; /* Added blue border */
+            z-index: 10;
+            border-bottom: 2px solid #004080;
+            height: 80px;
+            outline: 2px solid #ADD8E6;
         }
 
         .logo {
@@ -52,8 +54,8 @@
         }
 
         .header-links {
-            display: flex; /* Added to contain the links */
-            align-items: center; /* Vertically center items */
+            display: flex;
+            align-items: center;
         }
 
         .header-links a {
@@ -67,19 +69,21 @@
             color: #e0e0e0;
         }
 
-        /* New styles for the blue bubbles */
         .header-links a {
-            background-color: #007bff; /* Blue background */
-            color: white; /* White text */
-            padding: 8px 16px; /* Adjust padding as needed */
-            border-radius: 16px; /* Make it round */
-            text-decoration: none; /* Remove underline */
-            margin-left: 10px; /* Add some horizontal space between links */
+            background-color: #2C1647;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-left: 10px;
             font-size: 0.9em;
+            border: 2px solid #ADD8E6;
+            opacity: 0.8;
         }
 
         .header-links a:hover {
-            background-color: #0056b3; /* Darker blue on hover */
+            background-color: #a95cc8;
+            opacity: 1;
         }
 
         .redeem-box {
