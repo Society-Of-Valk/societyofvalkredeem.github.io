@@ -113,12 +113,31 @@
         .redeem-button:hover {
             background-color: #a95cc8;
         }
+
+        .holographic {
+            background: linear-gradient(to right, #29abe2, #9d4edd, #f06292, #29abe2);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: holographic-effect 5s infinite alternate;
+            text-shadow: 0 0 5px #29abe2, 0 0 10px #9d4edd, 0 0 15px #f06292;
+        }
+
+        @keyframes holographic-effect {
+            0% {
+                background-position: 0% 50%;
+                text-shadow: 0 0 5px #29abe2, 0 0 10px #9d4edd, 0 0 15px #f06292;
+            }
+            100% {
+                background-position: 100% 50%;
+                text-shadow: 0 0 10px #29abe2, 0 0 15px #9d4edd, 0 0 20px #f06292;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <div class="logo">Society Of Valk Redeem</div>
+            <div class="logo"><span class="holographic">Society Of Valk Redeem</span></div>
             <div class="header-links">
                 <a href="#">Sign In</a>
                 <a href="#">Admin</a>
@@ -126,7 +145,7 @@
         </div>
 
         <div class="redeem-box">
-            <h2 class="redeem-title">Society Of Valk</h2>
+            <h2 class="redeem-title"><span class="holographic">Society Of Valk</span></h2>
             <h3 class="redeem-title" style="font-size: 1.5em; margin-top: 0;">Code Redemption</h3>
             <p class="redeem-subtitle">Enter your exclusive code below to claim your reward</p>
         </div>
