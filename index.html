@@ -48,7 +48,7 @@
         }
 
         .logo {
-            font-size: 1.2em;
+            font-size: 1.5em;
             font-weight: bold;
             color: #d8b4fe;
         }
@@ -148,6 +148,7 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
             width: 100%;
+            margin-top: 10px;
         }
 
         .redeem-button:hover {
@@ -209,18 +210,217 @@
             box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
         }
 
+        #login-panel {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #2a2a3c;
+            padding: 30px;
+            border-radius: 10px;
+            z-index: 1000;
+            width: 320px;
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 2px solid #4a148c;
+        }
+
+        #login-panel h2 {
+            font-size: 2em;
+            margin-bottom: 25px;
+            color: #d8b4fe;
+            text-align: center;
+        }
+
+        #login-panel label {
+            display: block;
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #a0a0b0;
+            text-align: left;
+            margin-bottom: 8px;
+        }
+
+        #login-panel input {
+            width: calc(100% - 40px);
+            padding: 12px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border: 1px solid #6b7280;
+            border-radius: 5px;
+            background-color: #3b3b4f;
+            color: #e0e0e0;
+            font-size: 0.9em;
+            outline: none;
+        }
+
+        #login-panel input:focus{
+             border-color: #d8b4fe;
+             box-shadow: 0 0 5px rgba(216, 180, 254, 0.3);
+        }
+
+        #login-panel button {
+            background-color: #8e44ad;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        #login-panel button:hover {
+            background-color: #a95cc8;
+        }
+
+        .close-button {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #e53e3e;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            border: 2px solid #b22222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 0;
+        }
+
+        .close-button:hover {
+            background-color: #c53030;
+        }
+
+
+        .login-panel-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column; /* Changed to column */
+            align-items: center; /* Center items horizontally */
+            gap: 20px;
+        }
+
+        .back-button-container {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1001; /* Ensure it's above other elements if needed */
+            display: none;
+        }
+
+        .back-button {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #a0a0b0;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            background: none;
+            text-align: left;
+            transform: translateX(0);
+        }
+
+        .back-button:hover {
+            color: #fff;
+        }
+
+        .back-button::before {
+            content: '<';
+            font-size: 1.5em;
+            line-height: 0.8;
+        }
+
+        #hero-text {
+            display: none;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 20px;
+            color: #fff;
+            text-align: left;
+            max-width: 90%; /* Changed to percentage */
+            box-sizing: border-box;
+            margin-top: 20px; /* Added margin to separate from login */
+        }
+
+        #hero-text h2 {
+            font-size: 1.2em; /* Adjusted font size for smaller screens */
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #d8b4fe;
+        }
+
+        #hero-text p {
+            font-size: 0.8em; /* Adjusted font size for smaller screens */
+            color: #a0a0b0;
+            margin-bottom: 15px;
+        }
+
+        #hero-text .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        #hero-text .benefit-icon {
+            width: 25px; /* Adjusted size for smaller screens */
+            height: 25px;
+            border-radius: 50%;
+            background-color: #4a148c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 0.8em; /* Adjusted font size for smaller screens */
+        }
+
+        #hero-text .benefit-text {
+            font-size: 0.8em; /* Adjusted font size for smaller screens */
+            color: #e0e0e0;
+        }
+        @media (min-width: 768px) {
+            #hero-text h2 {
+                font-size: 1.5em;
+            }
+            #hero-text p{
+                font-size: 0.9em;
+            }
+            #hero-text .benefit-icon{
+                width: 30px;
+                height: 30px;
+                font-size: 1em;
+            }
+            #hero-text .benefit-text{
+                font-size: 0.9em;
+            }
+        }
+
     </style>
 </head>
 <body>
     <div class="header">
         <div class="logo holographic-text">Society Of Valk Redeem</div>
         <div class="header-links">
-            <a href="#">Sign In</a>
+            <a href="#" id="sign-in-button">Sign In</a>
             <a href="#">Admin</a>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="code-redemption-container" style="display: block;">
         <div class="redeem-box holographic-card"  style="width: 100%;">
             <h2 class="redeem-title holographic-text">Society Of Valk</h2>
             <h3 class="redeem-title" style="font-size: 1.2em; margin-top: 0; width: 100%;">Code Redemption</h3>
@@ -235,5 +435,52 @@
             <button type="submit" class="redeem-button" style="width: 100%;">Redeem Now</button>
         </div>
     </div>
+
+    <div class="login-panel-container" id="login-panel" style="display: none;">
+        <div class="back-button-container">
+            <button  class="back-button">Back to Code Redemption</button>
+        </div>
+        <h2>User Login</h2>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" style="width: calc(113% - 40px);">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" style="width: calc(113% - 40px);">
+        <button id="login-button">Login</button>
+    </div>
+
+
+    <script>
+        const signInButton = document.getElementById('sign-in-button');
+        const loginPanel = document.getElementById('login-panel');
+        const closeButton = document.querySelector('.close-button');
+        const codeRedemptionContainer = document.getElementById('code-redemption-container');
+        const backToHomeButton = document.querySelector('.back-button');
+        const heroText = document.getElementById('hero-text');
+
+
+        signInButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            loginPanel.style.display = 'flex';
+            codeRedemptionContainer.style.display = 'none';
+            backToHomeButton.style.display = 'block';
+            heroText.style.display = 'block';
+
+        });
+
+        closeButton.addEventListener('click', function() {
+            loginPanel.style.display = 'none';
+            codeRedemptionContainer.style.display = 'block';
+            backToHomeButton.style.display = 'none';
+            heroText.style.display = 'none';
+
+        });
+
+        backToHomeButton.addEventListener('click', function() {
+            loginPanel.style.display = 'none';
+            codeRedemptionContainer.style.display = 'block';
+            backToHomeButton.style.display = 'none';
+            heroText.style.display = 'none';
+        });
+    </script>
 </body>
 </html>
